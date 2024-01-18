@@ -1,3 +1,5 @@
+// @refresh-reset 
+//yukarıdaki kod sayesinde ctrl+s yapamadan yapılan her değişikli devamlı ekrana getiriyor
 import { useState } from "react";
 const developer={
 FullStackDeveloper:"Nodejs(Expressjs),React,AspMVC",
