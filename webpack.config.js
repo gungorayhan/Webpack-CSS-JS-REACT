@@ -16,20 +16,24 @@ module.exports={
                 use:[MiniCssExtractPlugin.loader, "css-loader", "postcss-loader","sass-loader"]
             },
             {
-                test:/\.js$/,
+                test:/\.jsx?$/,
                 exclude:/node_modules/,
                 use:{
-                    loader:"babel-loader"
+                    loader:"babel-loader",
                 }
             }
         ]
     },
     plugins:[new MiniCssExtractPlugin()],
+    
     devServer:{
         contentBase:"./dist"
     },
     target:target,
     devtool:"source-map",
+    resolve:{
+        extensions:[".js",".jsx"],
+    },
     devServer: {
         contentBase: "./dist",
         hot: true,
